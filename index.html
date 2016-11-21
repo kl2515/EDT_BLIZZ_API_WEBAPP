@@ -1,0 +1,210 @@
+<!-- Katherine Lin EagleDream Blizzard Web App-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Eagledream Technologies Blizzard Web App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- jQuery Script -->
+	<script src="scripts/jquery-3.1.1.js"></script>
+	<!-- Javascript -->
+	<script src="scripts/script.js" type="text/javascript"></script>
+	<!-- CSS Styles -->
+	<link href="styles/styles.css" rel="stylesheet" type="text/css">
+	<!-- Google Font Homenaje -->
+	<link href="https://fonts.googleapis.com/css?family=Homenaje" rel="stylesheet">
+</head>
+<body>
+
+<div>
+	<!-- logo, inputs, search -->
+	<div class="logosearch">
+	<img src='media/eagledreamtechnologieslogowhite75.png' alt=''/>
+	<form id="form1" action="">
+		<input id="characterName" type="text" name="characterName" placeholder="Character Name" autofocus>
+		<input id="realmName" type="text" name="realmName" placeholder="Realm Name">
+		<input type="submit" value="Search">
+		<div id="errorMsg"></div>
+	</form>
+	</div>
+
+	<div class="spinny"></div>
+
+	<!-- returned results -->
+	<div class="results">
+		<button id="close" type="button">Close</button>
+		<div class="flex-container">
+			<!-- contains character stats -->
+			<div class="box box1-1">
+				<div class="flex-container-2">
+					<!-- contains attributes, attack, spell -->
+					<div class="box2">
+						<div class="flex-container-3">
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4><strong>Attributes</strong></h4>
+									</div>
+									<div class="box4">
+										<p>Strength</p><p id="strength"></p>
+									</div>
+									<div class="box4">
+										<p>Agility</p><p id="agility"></p>
+									</div>
+									<div class="box4">
+										<p>Intellect</p><p id="intellect"></p>
+									</div>
+									<div class="box4">
+										<p>Stamina</p><p id="stamina"></p>
+									</div>
+								</div>
+							</div>
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4><strong>Attack</strong></h4>
+									</div>
+									<div class="box4">
+										<p>Damage</p><p id="maxdamage"></p><p id="mindamage"></p>
+									</div>
+									<div class="box4">
+										<p>Speed</p><p id="speed"></p>
+									</div>
+								</div>
+							</div>
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4><strong>Spell</strong></h4>
+									</div>
+									<div class="box4">
+										<p>Mana Regen</p><p id="manaregen"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- contains defense, enhancements -->
+					<div class="box2">
+						<div class="flex-container-3">
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4><strong>Defense</strong></h4>
+									</div>
+									<div class="box4">
+										<p>Armor</p><p id="armor"></p>
+									</div>
+									<div class="box4">
+										<p>Dodge</p><p id="dodge"></p>
+									</div>
+									<div class="box4">
+										<p>Parry</p><p id="parry"></p>
+									</div>
+									<div class="box4">
+										<p>Block</p><p id="block"></p>
+									</div>
+								</div>
+							</div>
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4><strong>Enhancements</strong></h4>
+									</div>
+									<div class="box4">
+										<p>Crit</p><p id="crit"></p>
+									</div>
+									<div class="box4">
+										<p>Haste</p><p id="haste"></p>
+									</div>
+									<div class="box4">
+										<p>Mastery</p><p id="mastery"></p>
+									</div>
+									<div class="box4">
+										<p>Leech</p><p id="leech"></p>
+									</div>
+									<div class="box4">
+										<p>Versatility</p><p id="versatility"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- contains item sets info -->
+			<div class="box box1-2">
+				<div class="flex-container-2">
+					<div class="box2">
+						<div class="flex-container-3">
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4>My Item Sets</h4>
+									</div>
+									<div class="box4">
+										<p>Helm</p>
+									</div>
+									<div class="box4">
+										<p>Chest</p>
+									</div>
+									<div class="box4">
+										<p>Shoulders</p>
+									</div>
+									<div class="box4">
+										<p>Legs</p>
+									</div>
+									<div class="box4">
+										<p>Feet</p>
+									</div>
+									<div class="box4">
+										<p>Trinket</p>
+									</div>
+									<div class="box4">
+										<p>Back</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="box2">
+						<div class="flex-container-3">
+							<div class="box3">
+								<div class="flex-container-4">
+									<div class="box4">
+										<h4><br /></h4>
+									</div>
+									<div class="box4">
+										<p id="helmN"></p><p id="helmP"></p>
+									</div>
+									<div class="box4">
+										<p id="chestN"></p><p id="chestP"></p>
+									</div>
+									<div class="box4">
+										<p id="shouldersN"></p><p id="shouldersP"></p>
+									</div>
+									<div class="box4">
+										<p id="legsN"></p><p id="legsP"></p>
+									</div>
+									<div class="box4">
+										<p id="feetN"></p><p id="feetP"></p>
+									</div>
+									<div class="box4">
+										<p id="trinketN"></p><p id="trinketP"></p>
+									</div>
+									<div class="box4">
+										<p id="backN"></p><p id="backP"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

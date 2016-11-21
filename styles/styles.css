@@ -1,0 +1,232 @@
+/* Katherine Lin EagleDream Blizzard Web App CSS */
+body {
+	background-image: url("../media/panda.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Homenaje', sans-serif;
+	text-align: center;
+	margin: 0px;
+}
+
+h4 {
+	margin-bottom: 5px;
+}
+
+p {
+	display: inline-block;
+	margin: 3px 0px;
+	color: #fff8ba;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* search form */
+
+input[type=text] {
+	width: 300px;
+	height: 22px;
+	padding: 3px 15px;
+	margin: 6px 0;
+	background-color: #54443c;
+	border: 1px solid rgba(255, 248, 186, 0.5);
+	font-family: 'Homenaje', sans-serif;
+	color: white;
+	font-size: 1.1em;
+}
+
+input[type=submit] {
+	width: 330px;
+	height: 30px;
+	padding: 3px 15px;
+	margin: 6px 0;
+	background-color: #d6896f; /* For browsers with no gradient support */
+	background: -webkit-linear-gradient(left top, #fff8ba, #e3ac86, #d6896f); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #fff8ba, #e3ac86, #d6896f); /* For Opera 11.1 to 12.0 */
+ 	background: -moz-linear-gradient(bottom right, #fff8ba, #e3ac86, #d6896f); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #fff8ba, #e3ac86, #d6896f); /* Standard */
+	border: 1px solid rgba(255, 248, 186, 0.5);
+	font-family: 'Homenaje', sans-serif;
+	color: white;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.logosearch {
+	position: relative;
+	left: 50%;
+	margin-left: -165px;
+	width: 330px;
+	padding-top: 40px;
+	text-align: center;
+}
+
+#errorMsg {
+	padding: 3px 15px;
+	margin: 6px 0;
+	background-color: rgba(214, 137, 111, 0.7);
+	border: 1px solid rgba(255, 248, 186, 0.5);
+	font-family: 'Homenaje', sans-serif;
+	color: white;
+	font-size: 1.2em;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* loading icon */
+.spinny {
+	border: 16px solid rgba(214, 137, 111, 0.7);
+	border-radius: 50%;
+	border-top: 16px solid rgba(255, 248, 186, 0.5);
+	width: 55px;
+	height: 55px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	text-align: center;
+	margin: 0 auto;
+	top: 100px;
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* result styles */
+
+#close {
+	float:right;
+    display:inline-block;
+    padding:2px 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button {
+	color: white;
+	background-color: rgba(214, 137, 111, 0);
+	border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: 'Homenaje', sans-serif;
+}
+
+.results {
+	text-align: center;
+	background-color: rgba(84, 68, 60, 0.7);
+	border-top: 1px solid rgba(255, 248, 186, 0.5);
+	border-bottom: 1px solid rgba(255, 248, 186, 0.5);
+	position: relative;
+	width: 100%;
+	margin-top: 30px;
+	min-height: 450px;
+	color: white;
+}
+
+.flex-container {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap; /* Displays child elements from left to right(as columns) */
+	-webkit-flex: 0 1 auto;  /* Safari 6.1+ */
+    -ms-flex: 0 1 auto;  /* IE 10 */
+    flex: 0 1 auto;
+	justify-content: center;
+	margin: 20px 30px;
+}
+
+.box {
+    background: rgba(214, 137, 111, 0.7);
+	border: 1px solid rgba(255, 248, 186, 0.5);
+	border-radius: 5px;
+	padding: 10px 30px;
+	margin: 20px 15px;
+	text-align: left;
+}
+
+.box1-1 {
+	flex-basis: 500px;
+}
+
+.box1-2 {
+	flex-basis: 300px;
+}
+
+.flex-container-2 {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row; /* Displays child elements from left to right(as columns) */
+	-webkit-flex: 0 1 auto;  /* Safari 6.1+ */
+    -ms-flex: 0 1 auto;  /* IE 10 */
+    flex: 0 1 auto;
+}
+
+.box2 {
+	padding: 5px;
+	width: 230px;
+	margin: 0px 10px;
+}
+
+.box2-2 {
+	margin: 0px 10px;
+}
+
+.flex-container-3 {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column; /* Displays child elements from top to bottom(as rows) */
+	-webkit-flex: 0 1 auto;  /* Safari 6.1+ */
+    -ms-flex: 0 1 auto;  /* IE 10 */
+    flex: 0 1 auto;
+}
+
+.box3 {
+	padding: 3px;
+}
+
+.flex-container-4 {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column; /* Displays child elements from top to bottom(as rows) */
+	-webkit-flex: 0 1 auto;  /* Safari 6.1+ */
+    -ms-flex: 0 1 auto;  /* IE 10 */
+    flex: 0 1 auto;
+
+}
+
+#strength, #agility, #intellect, #stamina, #mindamage, #maxdamage, #speed, #manaregen, 
+#armor, #dodge, #parry, #block, #crit, #haste, #mastery, #leech, #versatility, 
+#helmP, #chestP, #shouldersP, #legsP, #feetP, #trinketP, #backP {
+	float: right;
+	color: white;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* media queries */
+/* When screen width size less than 768px, ... */
+@media only screen and (max-width: 768px) {
+	/* Display results as one column rather than two and change background pic*/
+    .flex-container {
+    	display: -webkit-flex;
+		display: flex;
+    	flex-direction: column;
+    }
+    body {
+    	background-image: url("../media/dragon-sm.jpg");
+    }
+}
+
+/* When screen width size less than 575px, ...*/
+@media only screen and (max-width: 575px) {
+	.flex-container-2 {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	}
+}
